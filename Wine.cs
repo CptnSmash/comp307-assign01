@@ -18,12 +18,49 @@ public class Wine
 	//The class of the wine. Called category here as class is a restricted keyword.
 	private int category { get => category; set { category = value; } };
 
-	public Wine()
+	//Main constructor - for test and actual use
+	public Wine(decimal alcohol, decimal malic, decimal ash, decimal ashAlkalinity, decimal magnesium, decimal totalPhenols, decimal flavanoids, decimal nfnPhenols, decimal proanthocyanins, decimal colorIntensity, decimal hue, decimal od, decimal proline)
 	{
+		this.alcohol = alcohol;
+		this.malic = malic;
+		this.ash = ash;
+		this.ashAlkalinity = ashAlkalinity;
+		this.magnesium = magnesium;
+		this.totalPhenols = totalPhenols;
+		this.flavanoids = flavanoids;
+		this.nfnPhenols = nfnPhenols;
+		this.proanthocyanins = proanthocyanins;
+		this.colorIntensity = colorIntensity;
+		this.hue = hue;
+		this.od = od;
+		this.proline = proline;
+	}
 
+	//Training constructor - adds category information
+	public Wine(decimal alcohol, decimal malic, decimal ash, decimal ashAlkalinity, decimal magnesium, decimal totalPhenols, decimal flavanoids, decimal nfnPhenols, decimal proanthocyanins, decimal colorIntensity, decimal hue, decimal od, decimal proline, int category)
+	{
+		this.alcohol = alcohol;
+		this.malic = malic;
+		this.ash = ash;
+		this.ashAlkalinity = ashAlkalinity;
+		this.magnesium = magnesium;
+		this.totalPhenols = totalPhenols;
+		this.flavanoids = flavanoids;
+		this.nfnPhenols = nfnPhenols;
+		this.proanthocyanins = proanthocyanins;
+		this.colorIntensity = colorIntensity;
+		this.hue = hue;
+		this.od = od;
+		this.proline = proline;
+		this.category = category;
 	}
 
 	public double distanceTo(Wine other) {
 		return null;
+	}
+
+	public bool categorise(int category) { 
+		this.category = category;
+		return true;
 	}
 }
